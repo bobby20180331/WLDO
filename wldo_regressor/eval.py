@@ -152,8 +152,8 @@ def load_model_from_disk(model_path, shape_family_id, load_from_disk, device):
     if model_path is not None:
         print( "found previous model %s" % model_path )
         print( "   -> resuming" )
-        model_state_dict = torch.load(model_path)
-
+        # model_state_dict = torch.load(model_path)
+        torch.jit.load(model_path)
         own_state = model.state_dict()
         for name, param in model_state_dict.items():
             try:
