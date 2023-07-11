@@ -7,10 +7,6 @@ Evaluation and demo code for our ECCV 2020 paper: *Who Left the Dogs Out? 3D Ani
 
 ![](docs/banner.jpg)
 
-## Disclaimer
-
-Please note, this repository is in beta while I make bug fixes etc.
-
 ## Install
 
 Clone the repository **with submodules**:
@@ -24,7 +20,7 @@ For segmentation decoding, install pycocotools
 
 ### Datasets
 
-To use the StanfordExtra dataset, you will need to download the .json file [via the repository](https://github.com/benjiebob/StanfordExtra). 
+Follow the instructions [on the repository](https://github.com/benjiebob/StanfordExtra) to download StanfordExtra annotations and images.
 
 **Please ensure you have StanfordExtra_v12 installed, which we released 1 Feb 2021.**
 
@@ -40,6 +36,16 @@ The train/validation/test splits used for our ECCV 2020 submission are contained
 Please download our [pretrained model](https://drive.google.com/file/d/1khc-wttwBZ-I2ub1OgkhdB9aFDo0OMn4/view?usp=sharing) and place underneath `data/pretrained/3501_00034_betas_v4.pth`.
 
 # Quickstart
+
+## Demo
+
+To run the model on a series of images, place the images in a directory, and call the script demo.py.
+To see an example of this working, run demo.py and it will use the images in `example_imgs`:
+
+```
+cd wldo_regressor
+python demo.py
+```
 
 ## Eval
 
@@ -99,15 +105,6 @@ python eval.py --dataset animal_pose
 
 Note that we have recently updated the tables in the arxiv version of our paper to account for some fixed dataset annotations and to use an improved version of the PCK metric. More details can be found in the paper.
 
-## Demo
-
-To run the model on a series of images, place the images in a directory, and call the script demo.py.
-To see an example of this working, run demo.py and it will use the images in `example_imgs`:
-
-```
-cd wldo_regressor
-python demo.py
-```
 
 ## Related Work
 This repository owes a great deal to the following works and authors:
